@@ -20,6 +20,10 @@ h2 {
   text-align: center;
 }
 
+h3 {
+  margin: 1rem 0;
+}
+
 ul {
   display: flex;
   flex-wrap: wrap;
@@ -44,16 +48,14 @@ ul li a {
 
 /* header styles */
 
-header.container {
-  background-color: #000;
-}
-
 .hero-container {
   color: #ffffff;
   border-radius: 30px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  background-color: #000;
 }
 
 .left {
@@ -173,8 +175,9 @@ i.fa-message {
 }
 
 .view-all {
-  position: absolute;
-  right: 50%;
+  display: block;
+  width: 120px;
+  margin: 0 auto 3rem;
 }
 
 /* footer styles */
@@ -203,13 +206,17 @@ footer nav {
     flex-direction: column;
   }
   .navigation-box {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3, 180px);
     width: 100%;
     background-color: #ffffff;
   }
 
   .navigation-box a {
     padding: 10px 15px;
+    border: 1px solid #e8e8e8;
+    width: 180px;
+    font-size: 16px;
   }
 
   .transfer-button {
@@ -218,5 +225,44 @@ footer nav {
 
   .blogs {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .view {
+    display: block;
+  }
+}
+
+/* Mobile devices */
+
+@media only screen and (max-width: 688px) {
+  .left {
+    width: 100%;
+  }
+
+  .right {
+    width: 70%;
+  }
+
+  main {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navigation-box {
+    background-color: initial;
+  }
+
+  .navigation-box a {
+    border: 1px solid #e8e8e8;
+  }
+
+  .blogs {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  footer nav ul {
+    display: flex;
+    flex-direction: column;
   }
 }
