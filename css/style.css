@@ -1,3 +1,7 @@
+/* google fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
 /* common styles or utilities */
 
 * {
@@ -8,6 +12,7 @@
 
 body {
   background-color: #ffffff;
+  font-family: "Poppins", sans-serif;
 }
 
 h1 {
@@ -70,6 +75,7 @@ ul li a {
 
 .right img {
   width: 100%;
+  margin-bottom: -6.5px;
 }
 
 .primary-button {
@@ -132,7 +138,7 @@ main {
   justify-content: center;
   border-radius: 10px;
   margin: 0;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .secondary-button {
@@ -147,7 +153,7 @@ main {
 }
 
 .blog {
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px 0px;
+  box-shadow: #959da533 0px 8px 24px 0px;
 }
 
 .blog img {
@@ -264,6 +270,10 @@ footer nav {
 @media only screen and (max-width: 688px) {
   .left {
     width: 100%;
+  }
+
+  .left p {
+    text-overflow: ellipsis;
   }
 
   .right {
